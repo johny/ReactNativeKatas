@@ -25,11 +25,17 @@ const Alignment= (props)=>{
   return (
     <View style={styles.container}>
       <Box/>
-      <Box/>
-      <Box/>
-      <Box/>
-      <Box/>
-      <Box/>
+      <View style={styles.center}>
+        <Box/>
+      </View>
+      <View style={styles.xcenter}>
+        <Box/>
+        <Box/>
+        <Box/>
+      </View>
+      <View style={styles.center}>
+        <Box/>
+      </View>
       <Box/>
     </View>
   )
@@ -43,6 +49,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors[1],
     flex:1,
   },
+  center: {
+    alignItems: 'center'
+  },
+  xcenter: {
+    justifyContent: 'center',
+    flexDirection: 'row'
+  },
   text:{
     color: 'white',
     textAlign:'center'
@@ -55,4 +68,3 @@ const styles = StyleSheet.create({
 
 Alignment.displayName = 'Alignment'
 export default Alignment
-
